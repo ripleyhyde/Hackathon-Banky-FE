@@ -1,13 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import UserProfile from "./components/UserProfile";
+import UserForm from "./components/UserForm";
 
 function App() {
   return (
-    <dic>
-      <Routes>
-        <Route path="/userprofile" element={<UserProfile />}></Route>
-      </Routes>
-    </dic>
+    <div>
+      <UserForm />
+    </div>
   );
 }
 
