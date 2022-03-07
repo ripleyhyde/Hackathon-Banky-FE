@@ -25,18 +25,36 @@ class AuthStore {
       }
     }
   };
-  signIn = async (user) => {
+  logIn = async (user) => {
     try {
-      const resp = await api.post("/signin", user);
+      const resp = await api.post("/login", user);
       this.setUser(resp.data.token);
-    } catch (error) {}
+      console.log(
+        "🚀 ~ file: authStore.js ~ line 32 ~ AuthStore ~ logIn= ~ resp.data.token",
+        resp.data.token
+      );
+    } catch (error) {
+      console.log(
+        "🚀 ~ file: authStore.js ~ line 33 ~ AuthStore ~ logIn= ~ error",
+        error
+      );
+    }
   };
 
   signUp = async (user) => {
     try {
       const resp = await api.post("/signup", user);
       this.setUser(resp.data.token);
-    } catch (error) {}
+      console.log(
+        "🚀 ~ file: authStore.js ~ line 42 ~ AuthStore ~ signUp= ~ resp.data.token",
+        resp.data.token
+      );
+    } catch (error) {
+      console.log(
+        "🚀 ~ file: authStore.js ~ line 40 ~ AuthStore ~ signUp= ~ error",
+        error
+      );
+    }
   };
   signOut = () => {
     delete api.defaults.headers.common.Authorization;
