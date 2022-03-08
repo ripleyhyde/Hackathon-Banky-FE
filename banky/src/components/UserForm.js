@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Modal, Form } from "react-bootstrap";
 import { BsPersonCircle } from "react-icons/bs";
 import authstore from "../stores/authStore";
 import { observer } from "mobx-react";
+import red from "../assets/red.png";
 
 const UserForm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,17 +31,14 @@ const UserForm = () => {
   };
   return (
     <div>
-      <img
-        src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
-        alt="Girl in a jacket"
-      />
+      <div>
+        <img src={red} alt="Logo" className="i" />
+      </div>
       <h3>
         {authstore.user ? (
-          <div>
-            <button onClick={signout} className="button">
-              Sign Out
-            </button>
-          </div>
+          <button onClick={signout} className="button">
+            Sign Out
+          </button>
         ) : (
           <button onClick={() => setIsOpen(true)} className="button">
             Sign Up
@@ -54,7 +52,7 @@ const UserForm = () => {
         className="form"
       >
         <Modal.Header>
-          <Modal.Title>
+          <Modal.Title className="user">
             <BsPersonCircle /> User
           </Modal.Title>
         </Modal.Header>

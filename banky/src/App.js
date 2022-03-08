@@ -4,9 +4,13 @@ import Cards from "./Components/Cards";
 
 function App() {
   return (
-    <div className="App">
-      {/* <Cards /> */}
-      <UserForm />
+    <div>
+      <h1>BANQUE PIVET</h1>
+
+      <div className="App">
+        {/* <Cards /> */}
+        <UserForm />
+      </div>
     </div>
   );
 }

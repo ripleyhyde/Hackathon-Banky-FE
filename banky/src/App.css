@@ -243,6 +243,8 @@ button.ghost {
 
 h3 {
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .form {
@@ -279,12 +281,24 @@ h3 {
 }
 
 body {
-  background-color: #303030;
+  background-color: whitesmoke;
 }
 
-img {
-  border-radius: 50%;
-  object-fit: cover;
+.i {
+  width: 500px;
   height: 200px;
-  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  justify-content: flex-start;
+  font-family: "Fantasy";
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #0066cc;
+  color: #191970;
+}
+
+.user {
+  font-size: 27px;
 }
