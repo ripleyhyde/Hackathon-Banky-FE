@@ -212,12 +212,12 @@
 
 button {
   border-radius: 200px;
-  border: #ff7255;
+  border: #45ade9;
   border-style: solid;
   border-width: 1px;
   border-bottom-left-radius: 90px;
   background-color: #ffffff;
-  color: #ff7255;
+  color: #45ade9;
   font-size: 15px;
   font-weight: bold;
   padding-top: 5px;
@@ -279,7 +279,7 @@ h3 {
 }
 
 body {
-  background-color: #303030;
+  background-color: whitesmoke;
 }
 
 img {
@@ -287,4 +287,21 @@ img {
   object-fit: cover;
   height: 200px;
   width: 200px;
+}
+
+.logo {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.buttonAddBeneficiary {
+  margin-left: 70px;
+  margin-bottom: 25px;
+}
+
+.beneficiaryCard {
+  display: flex;
+  align-items: center;
 }
