@@ -209,3 +209,26 @@
 .card__logo1 {
   height: 50px;
 }
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.app {
+  background-color: burlywood;
+  margin: 5px;
+}
+.app img {
+  width: 200px;
+  height: 200px;
+}
+.app p {
+  text-align: center;
+  color: black;
+}
