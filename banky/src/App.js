@@ -1,6 +1,8 @@
 import UserForm from "./Components/UserForm";
 import "./App.css";
 import Cards from "./Components/Cards";
+import Content from "./Components/Account/Content";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -8,8 +10,11 @@ function App() {
       <h1>BANQUE PIVET</h1>
 
       <div className="App">
-        {/* <Cards /> */}
-        <UserForm />
+        <Routes>
+          <Route path="/" element={<UserForm />} />
+          <Route path="/cards" element={<Cards />} />
+          <Route path="/content" element={<Content />} />
+        </Routes>
       </div>
     </div>
   );

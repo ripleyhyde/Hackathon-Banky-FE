@@ -28,20 +28,22 @@
   display: inline-block;
   width: 320px;
   height: 190px;
-  background-image: url("https://image.ibb.co/bVnMrc/g3095.png"),
-    linear-gradient(to right bottom, #000, red); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+  background-image: linear-gradient(
+    to right bottom,
+    #000,
+    red
+  ); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 8px;
-
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+  -webkit-transform-: preserve-3d;
+  -moz-transform-: preserve-3d;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
 }
@@ -65,21 +67,22 @@
 }
 
 .card__logo {
-  height: 20px;
+  height: 25px;
 }
 
 .card__front-logo {
   position: absolute;
   top: 18px;
-  right: 18px;
+  right: 10px;
 }
 .card__square {
   border-radius: 5px;
-  height: 30px;
+  height: 34px;
+  float: left;
 }
 
 .card_numer {
-  display: block;
+  display: flex;
   width: 100%;
   word-spacing: 4px;
   font-size: 20px;
@@ -87,11 +90,11 @@
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .card__space-75 {
-  width: 75%;
+  width: 60%;
   float: left;
 }
 
@@ -188,8 +191,11 @@
   display: inline-block;
   width: 320px;
   height: 190px;
-  background-image: url("https://image.ibb.co/bVnMrc/g3095.png"),
-    linear-gradient(to right bottom, #2be3e0, #0e8785); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+  background-image: linear-gradient(
+    to right bottom,
+    #2be3e0,
+    #0e8785
+  ); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -212,12 +218,12 @@
 
 button {
   border-radius: 200px;
-  border: #ff7255;
+  border: #45ade9;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   border-bottom-left-radius: 90px;
-  background-color: #ffffff;
-  color: #ff7255;
+  background-color: #fff;
+  color: #45ade9;
   font-size: 15px;
   font-weight: bold;
   padding-top: 5px;
@@ -295,10 +301,141 @@ h1 {
   justify-content: flex-start;
   font-family: "Fantasy";
   font-size: 40px;
-  text-shadow: 4px 4px 4px #0066cc;
+  text-shadow: 2px 2px 2px #0066cc;
   color: #191970;
 }
 
 .user {
   font-size: 27px;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #45ade9;
+  background: whitesmoke;
+  overflow: auto;
+  border-radius: 30px;
+  outline: none;
+  padding: 20px;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.bg {
+  padding: 5px;
+  color: #45ade9;
+  font-size: 13px;
+  position: relative;
+  bottom: 90px;
+  border-radius: 200px;
+  border: #45ade9;
+  border-style: solid;
+  border-width: 3px;
+  border-bottom-left-radius: 90px;
+}
+
+.btnS {
+  display: block;
+  float: right;
+  margin: 20px;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  justify-content: space-evenly;
+}
+
+.p1 {
+  color: #45ade9;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+.p2 {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.p3 {
+  color: green;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.adh2 {
+  align-content: center;
+}
+
+.b2 {
+  align-items: center;
+  display: flex;
+  border-radius: 8px;
+  margin-top: 1px;
+  height: 40px;
+  width: 90%;
+  padding-left: 20px;
+}
+
+.b3 {
+  margin: 20px;
+}
+
+.d0 {
+  border-bottom: 0;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 1px;
+}
+
+.t {
+  background-color: black;
 }
