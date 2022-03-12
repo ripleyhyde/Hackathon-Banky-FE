@@ -1,9 +1,9 @@
+import red from "../assets/red.png";
+import { observer } from "mobx-react";
 import React, { useState } from "react";
+import authstore from "../stores/authStore";
 import { Modal, Form } from "react-bootstrap";
 import { BsPersonCircle } from "react-icons/bs";
-import authstore from "../stores/authStore";
-import { observer } from "mobx-react";
-import red from "../assets/red.png";
 
 const UserForm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +68,6 @@ const UserForm = () => {
               placeholder="First Name"
             />
             <div>
-              {/* <Form.Label className="text">Last Name</Form.Label> */}
               <Form.Control
                 className="box"
                 name="lastName"
@@ -79,7 +78,6 @@ const UserForm = () => {
               />
             </div>
             <div>
-              {/* <Form.Label className="text">User Name</Form.Label> */}
               <Form.Control
                 className="box"
                 name="username"
@@ -90,7 +88,6 @@ const UserForm = () => {
               />
             </div>
             <div>
-              {/* <Form.Label className="text">Phone Number</Form.Label> */}
               <Form.Control
                 className="box"
                 name="phoneNumber"
@@ -101,7 +98,6 @@ const UserForm = () => {
               />
             </div>
             <div>
-              {/* <Form.Label className="text">Email</Form.Label> */}
               <Form.Control
                 className="box"
                 name="email"
@@ -112,7 +108,6 @@ const UserForm = () => {
               />
             </div>
             <div>
-              {/* <Form.Label className="text">Password</Form.Label> */}
               <Form.Control
                 className="box"
                 name="password"

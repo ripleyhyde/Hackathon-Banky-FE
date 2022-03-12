@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
-import shortid from "shortid";
 import "../../App.css";
+import shortid from "shortid";
+import Modal from "react-modal";
+import React, { useState } from "react";
 
 Modal.setAppElement("#root");
 

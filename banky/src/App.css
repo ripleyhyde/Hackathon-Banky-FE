@@ -216,7 +216,7 @@
   height: 50px;
 }
 
-button {
+.button {
   border-radius: 200px;
   border: #45ade9;
   border-style: solid;
@@ -366,6 +366,19 @@ h1 {
   display: block;
   float: right;
   margin: 20px;
+  border-radius: 200px;
+  border: #45ade9;
+  border-style: solid;
+  border-width: 3px;
+  border-bottom-left-radius: 90px;
+  background-color: #fff;
+  color: #45ade9;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .names {
@@ -427,6 +440,19 @@ h1 {
 
 .b3 {
   margin: 20px;
+  border-radius: 200px;
+  border: #45ade9;
+  border-style: solid;
+  border-width: 3px;
+  border-bottom-left-radius: 90px;
+  background-color: #fff;
+  color: #45ade9;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .d0 {
@@ -436,6 +462,118 @@ h1 {
   padding: 1px;
 }
 
-.t {
-  background-color: black;
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.app {
+  background-color: burlywood;
+  margin: 5px;
+}
+.app img {
+  width: 200px;
+  height: 200px;
+}
+.app p {
+  text-align: center;
+  color: black;
+}
+
+.ceo {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border-radius: 50%;
+}
+
+.about-text {
+  font: "bold";
+  line-height: 1.2em;
+  /* padding: 35px; */
+  color: #22201d;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.creat {
+  font-size: 25px;
+  border-style: solid;
+  border-color: #45ade9;
+  padding: 10px;
+  border-radius: 20px;
+  color: #000;
+  border-width: 4px;
+}
+
+.cas {
+  border-style: solid;
+  border-color: #45ade9;
+  padding: 10px;
+  border-radius: 20px;
+  color: #000;
+  border-width: 4px;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.at {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.box1 {
+  margin: 20px;
+  border-color: #45ade9;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.buttonAddBeneficiary {
+  margin-left: 70px;
+  margin-bottom: 25px;
+}
+
+.beneficiaryCard {
+  display: flex;
+  align-items: center;
+}
+
+.beneficiaryList {
+  flex-direction: column;
+  justify-content: flex-start;
+  width: auto;
+  margin: 10px;
+}
+
+.beneficiaryForm {
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+
+.box2 {
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  margin: 15px;
+  height: 40px;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.logo-img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  object-fit: cover;
 }

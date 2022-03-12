@@ -1,10 +1,9 @@
-import Moment from "moment";
-import React, { useEffect, useMemo, useState } from "react";
-import DataTable from "react-data-table-component";
-import { FaTrash } from "react-icons/fa";
-import { useParams } from "react-router-dom";
-import AddNew from "./AddNew";
 import DATA from "./data";
+import Moment from "moment";
+import AddNew from "./AddNew";
+import { FaTrash } from "react-icons/fa";
+import DataTable from "react-data-table-component";
+import React, { useEffect, useMemo, useState } from "react";
 
 const Content = () => {
   const [data, setData] = useState([]);
