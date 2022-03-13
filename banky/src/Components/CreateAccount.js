@@ -23,17 +23,22 @@ const CreateAccount = () => {
   };
   return (
     <div>
-      CreateAccount
+      <div className="cas">Create Account </div>
       <Form onSubmit={handleSubmit}>
-        <Form.Label>Account Type</Form.Label>
-        <input onChange={handleChaneg} />
-        <select onChange={handleChaneg}>
+        <Form.Label className="at">Account Type</Form.Label>
+        <select onChange={handleChaneg} className="box1">
           <option value="Checking Account">Checking Account</option>
           <option value="Saving Account">Saving Account</option>
           <option value="Overdraft Account">Overdraft Account</option>
         </select>
-        <button type="submit">Submit</button>
-        <Form.Control name="accountType" type="text" />
+        <button type="submit" className="button">
+          Submit
+        </button>
+        <Form.Control
+          name="accountType"
+          type="text"
+          placeholder="Purpose of opening account"
+        />
       </Form>
     </div>
   );

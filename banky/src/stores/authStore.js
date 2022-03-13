@@ -1,6 +1,6 @@
-import { makeAutoObservable } from "mobx";
-import decode from "jwt-decode";
 import api from "./api";
+import decode from "jwt-decode";
+import { makeAutoObservable } from "mobx";
 
 class AuthStore {
   user = null;

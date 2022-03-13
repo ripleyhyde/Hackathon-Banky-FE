@@ -1,8 +1,9 @@
+import red from "../assets/red.png";
+import { observer } from "mobx-react";
 import React, { useState } from "react";
+import authstore from "../stores/authStore";
 import { Modal, Form } from "react-bootstrap";
 import { BsPersonCircle } from "react-icons/bs";
-import authstore from "../stores/authStore";
-import { observer } from "mobx-react";
 
 const UserForm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,87 +31,108 @@ const UserForm = () => {
   };
   return (
     <div>
+      <div>
+        <img src={red} alt="Logo" className="i" />
+      </div>
       <h3>
         {authstore.user ? (
-          <>
-            <button onClick={signout}>Sign Out</button>
-          </>
+          <button onClick={signout} className="button">
+            Sign Out
+          </button>
         ) : (
-          <button onClick={() => setIsOpen(true)}>Sign Up</button>
+          <button onClick={() => setIsOpen(true)} className="button">
+            Sign Up
+          </button>
         )}
       </h3>
-      <Modal centered show={isOpen} onHide={() => setIsOpen(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>
+      <Modal
+        centered
+        show={isOpen}
+        onHide={() => setIsOpen(false)}
+        className="form"
+      >
+        <Modal.Header>
+          <Modal.Title className="user">
             <BsPersonCircle /> User
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
-            <Form.Label>First Name</Form.Label>
+            {/* <Form.Label className="text"></Form.Label> */}
             <Form.Control
+              className="box"
               name="firstName"
               value={user.firstName}
               type="text"
               onChange={handleChange}
+              placeholder="First Name"
             />
             <div>
-              <Form.Label>Last Name</Form.Label>
               <Form.Control
+                className="box"
                 name="lastName"
                 value={user.lastName}
                 type="text"
                 onChange={handleChange}
+                placeholder="Last Name"
               />
             </div>
             <div>
-              <Form.Label>User Name</Form.Label>
               <Form.Control
+                className="box"
                 name="username"
                 value={user.username}
                 type="text"
                 onChange={handleChange}
+                placeholder="User Name"
               />
             </div>
             <div>
-              <Form.Label>Phone Number</Form.Label>
               <Form.Control
+                className="box"
                 name="phoneNumber"
                 value={user.phoneNumber}
                 type="Number"
                 onChange={handleChange}
+                placeholder="Phone Number"
               />
             </div>
             <div>
-              <Form.Label>Email</Form.Label>
               <Form.Control
+                className="box"
                 name="email"
                 type="email"
                 value={user.email}
                 onChange={handleChange}
+                placeholder="Email"
               />
             </div>
             <div>
-              <Form.Label>Password</Form.Label>
               <Form.Control
+                className="box"
                 name="password"
                 type="password"
                 value={user.password}
                 onChange={handleChange}
+                placeholder="Password"
               />
             </div>
+            <Modal.Footer>
+              <div className="btn">
+                <button value="login" onClick={handleSubmit} className="button">
+                  Sign In
+                </button>
+                <button
+                  value="signUp"
+                  onClick={handleSubmit}
+                  className="button"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </Modal.Footer>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <div>
-            <button value="login" onClick={handleSubmit}>
-              Sign In
-            </button>
-            <button value="signUp" onClick={handleSubmit}>
-              Sign Up
-            </button>
-          </div>
-        </Modal.Footer>
       </Modal>
     </div>
   );

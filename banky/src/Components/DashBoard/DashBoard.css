@@ -1,0 +1,44 @@
+.cards {
+  background-color: #45ade950;
+  padding: 3rem;
+  border-radius: 55;
+  max-width: 110%;
+  height: auto;
+  margin: 50px;
+}
+
+.card-text {
+  font-size: 25px;
+  align-items: center;
+}
+
+.buttons {
+  border-radius: 200px;
+  border: #45ade9;
+  border-style: solid;
+  border-width: 3px;
+  border-bottom-left-radius: 90px;
+  background-color: #fff;
+  color: #45ade9;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-align: center;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}

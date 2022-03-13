@@ -9,7 +9,7 @@ class AccountStore {
   }
   fetchAccount = async () => {
     try {
-      const response = await api.get("/api/account");
+      const response = await api.get("/accounts");
       this.account = response.data;
       console.log(
         "🚀 ~ file: accountStore.js ~ line 14 ~ accountStore ~ fetchAccount= ~ this.accounts",
@@ -35,7 +35,7 @@ class AccountStore {
         );
       }
 
-      const response = await api.post(`/api/account`, newAccount);
+      const response = await api.post(`/accounts/create`, newAccount);
 
       this.account.push(response.data);
     } catch (e) {

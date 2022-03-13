@@ -1,9 +1,6 @@
 import React from "react";
 
 const ContactUs = () => {
-<<<<<<< Updated upstream
-  return <div>ContactUs</div>;
-=======
   return (
     <div>
       <Card style={{ width: "18rem" }}>
@@ -86,7 +83,6 @@ const ContactUs = () => {
       </div>
     </div>
   );
->>>>>>> Stashed changes
 };
 
 export default ContactUs;
